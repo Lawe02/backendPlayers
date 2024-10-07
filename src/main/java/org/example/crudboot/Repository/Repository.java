@@ -3,11 +3,13 @@ package org.example.crudboot.Repository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.crudboot.Model.Player;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.List;
 import java.io.InputStream;
 
+@Component
 public class Repository {
     private List<Player> players;
 
