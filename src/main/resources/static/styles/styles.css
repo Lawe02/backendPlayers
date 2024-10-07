@@ -16,7 +16,7 @@ header{
 }
 
 .player-section__title{
-    border-bottom: solid black 1px;
+    border-bottom: solid black 2px;
     padding-bottom: 7px;
     width: 99%;
     margin-left: 3px;
@@ -63,5 +63,19 @@ button {
 }
 .news-article__button:hover {
     background-color: #0056b3;
+}
+
+.header__nav-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header__nav-button:hover {
+    background-color: lightgray;
 }
 

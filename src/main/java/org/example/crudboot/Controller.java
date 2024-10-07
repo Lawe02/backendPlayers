@@ -39,4 +39,10 @@ public class Controller {
         return "index";
     }
 
+    @GetMapping("/players/sort/games")
+    public String sortByGames(Model model) {
+        model.addAttribute("players", service.sortPlayersByGames());
+        return "index";
+    }
+
 }

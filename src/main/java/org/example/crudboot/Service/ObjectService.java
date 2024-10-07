@@ -30,4 +30,10 @@ public class ObjectService {
                 .sorted(Comparator.comparing(Player::getPosition))
                 .toList();
     }
+
+    public List<Player> sortPlayersByGames() {
+        return getAllPlayers().stream()
+                .sorted(Comparator.comparing(Player::getGames).reversed())
+                .toList();
+    }
 }

@@ -21,11 +21,11 @@
 <main>
   <header class="header">
     <h1 class="header__title">
-      Top 20 PLayers ATM
+      Top 20 Players ATM
     </h1>
     <nav class="header__nav">
       <button class="header__nav-button" onclick="sortPlayers('goals')">Most Goals</button>
-      <button class="header__nav-button">Most Games</button>
+      <button class="header__nav-button" onclick="sortPlayers('games')">Most Games</button>
       <button class="header__nav-button" onclick="sortPlayers('position')">Position</button>
     </nav>
   </header>
@@ -37,6 +37,7 @@
       <article th:each="player : ${players}"  class="player-article">
         <img class="player-article__image" th:src="${player.imageURL}" alt="Sample Image">
         <div class="player-article__content">
+          <p th:text="'Name: ' + ${player.name}">Name: Player Name</p>
           <p th:text="'Position: ' + ${player.position}">Position: Player Position</p>
           <p th:text="'Games: ' + ${player.games}">Games: Player Games</p>
           <p th:text="'Goals: ' + ${player.goals}">Goals: Player Goals</p>
