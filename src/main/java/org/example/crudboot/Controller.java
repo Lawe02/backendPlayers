@@ -33,4 +33,10 @@ public class Controller {
         return "index"; // Return the updated template
     }
 
+    @GetMapping("/players/sort/position")
+    public String sortByPosition(Model model) {
+        model.addAttribute("players", service.sortPlayersByPosition());
+        return "index";
+    }
+
 }
