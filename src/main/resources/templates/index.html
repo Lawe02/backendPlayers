@@ -5,26 +5,15 @@
   <title>Player List</title>
 </head>
 <body>
-<div>
-  <h1>Player List</h1>
-  <table>
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Games</th>
-      <th>Goals</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="player : ${players}">
-      <td th:text="${player.name}">Name</td>
-      <td th:text="${player.position}">Position</td>
-      <td th:text="${player.games}">Games</td>
-      <td th:text="${player.goals}">Goals</td>
-    </tr>
-    </tbody>
-  </table>
-</div>
+<main>
+  <header>
+    <h1 class="header__title">Football players comparison</h1>
+    <nav class="header__nav">
+      <button class="header__nav-button">Goals</button>
+      <button class="header__nav-button">Games</button>
+      <button class="header__nav-button">Position</button>
+    </nav>
+  </header>
+</main>
 </body>
 </html>
