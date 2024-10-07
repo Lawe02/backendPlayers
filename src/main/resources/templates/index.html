@@ -5,20 +5,28 @@
   <title>Player List</title>
   <link href="/styles/styles.css" rel="stylesheet" ></link>
   <link href="/styles/tablet.css" rel="stylesheet" ></link>
+  <link href="/styles/mobile.css" rel="stylesheet"></link>
+  <script>
+    function sortPlayers(sortType) {
+      fetch(`/players/sort/${sortType}`)
+              .then(response => response.text())
+              .then(data => {
+                document.body.innerHTML = data;
+              })
+              .catch(error => console.error('Error:', error));
+    }
+  </script>
 </head>
 <body>
 <main>
   <header class="header">
     <h1 class="header__title">
-      All the news - All the time
+      Top 20 PLayers ATM
     </h1>
-    <h2 class="header__subtitle">
-      Welcome to my personal news outlet
-    </h2>
     <nav class="header__nav">
-      <button class="header__nav-button">Breaking</button>
-      <button class="header__nav-button">International</button>
-      <button class="header__nav-button">Sports</button>
+      <button class="header__nav-button" onclick="sortPlayers('goals')">Most Goals</button>
+      <button class="header__nav-button">Most Games</button>
+      <button class="header__nav-button">Position</button>
     </nav>
   </header>
   <section class="player-section">

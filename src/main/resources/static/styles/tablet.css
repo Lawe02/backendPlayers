@@ -1,5 +1,5 @@
 
-@media (600px <= width <= 1300px ) {
+@media (600px <= width <= 1100px ) {
     .player-section__article-container {
         grid-template-columns: repeat(2, 1fr);
     }

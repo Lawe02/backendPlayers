@@ -5,6 +5,7 @@ import org.example.crudboot.Repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -16,5 +17,11 @@ public class ObjectService {
 
     public List<Player> getAllPlayers() {
         return repo.getPlayers();
+    }
+
+    public List<Player> sortPlayersByGoals() {
+        return getAllPlayers().stream()
+                .sorted(Comparator.comparing(Player::getGoals).reversed())
+                .toList();
     }
 }
