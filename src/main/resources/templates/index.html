@@ -14,6 +14,19 @@
       <button class="header__nav-button">Position</button>
     </nav>
   </header>
+  <section class="player-section">
+    <div class="player-section__article-container" th:each="player : ${players}">
+      <article class="player-article">
+        <img th:src="${player.imageURL}" class="player-article__image" alt="Image of [[${player.name}]]">
+        <div class="player-article__content">
+          <h3 th:text="${player.name}">Player Name</h3>
+          <p th:text="'Position: ' + ${player.position}">Position: Player Position</p>
+          <p th:text="'Games: '+ ${player.games}">Games: Player Games</p>
+          <p th:text="'Goals: ' + ${player.goals}">Goals: Player Goals</p>
+        </div>
+      </article>
+    </div>
+  </section>
 </main>
 </body>
 </html>
